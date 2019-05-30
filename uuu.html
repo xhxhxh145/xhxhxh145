@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+     .cousel{
+         width: 300px;
+         height: 300px;
+         /* border: 1px solid red; */
+         margin: 100px auto;
+         -webkit-transform-style:preserve-3d;
+        transform-style: preserve-3d;
+        transform: rotateX(-30deg)rotateY(-40deg)
+     }
+     .cousel>div{
+         width: 300px;
+         height: 300px;
+      position: absolute;
+      border: 1px solid black;
+        border-radius: 50% 50%;
+     }
+     .cousel>div:nth-of-type(1){
+         animation: name 3s infinite linear;
+     }
+         .cousel>div:nth-of-type(2){
+         animation: name2 3s infinite linear;
+     }
+            .cousel>div:nth-of-type(3){
+         animation: name3 3s infinite linear;
+     }
+        .cousel>div:nth-of-type(4){
+         animation: name4 3s infinite linear;
+     }
+         .cousel>div:nth-of-type(5){
+         animation: name5 3s infinite linear;
+     }
+            .cousel>div:nth-of-type(6){
+         animation: name6 3s infinite linear;
+     }
+
+     @keyframes name{
+         0%{
+             transform: rotateX(0deg) rotateY(0deg);
+         }
+         100%{
+              transform: rotateX(360deg) rotateY(360deg);
+         }
+     }
+     @keyframes name2{
+         0%{
+             transform: rotateX(0deg) rotateY(60deg);
+         }
+         100%{
+              transform: rotateX(360deg) rotateY(420deg);
+         }
+     }
+     @keyframes name3{
+         0%{
+             transform: rotateX(0deg) rotateY(120deg);
+         }
+         100%{
+              transform: rotateX(360deg) rotateY(480deg);
+         }
+     }
+      @keyframes name4{
+         0%{
+             transform: rotateX(0deg) rotateY(180deg);
+         }
+         100%{
+              transform: rotateX(360deg) rotateY(540deg);
+         }
+     }
+     @keyframes name5{
+         0%{
+             transform: rotateX(0deg) rotateY(240deg);
+         }
+         100%{
+              transform: rotateX(360deg) rotateY(600deg);
+         }
+     }
+     @keyframes name6{
+         0%{
+             transform: rotateX(0deg) rotateY(300deg);
+         }
+         100%{
+              transform: rotateX(360deg) rotateY(660deg);
+         }
+     }
+   .inner{
+       width: 6px; height: 6px; position: absolute;left: 150px;top:300px;
+   }
+  
+
+
+    
+    </style>
+    <title>Document</title>
+</head>
+<body>
+  <div class="cousel">
+   <div class="box box1" id="box1"></div>
+   <div class="box box2" id="box2"></div>
+   <div class="box box3" id="box3"></div>
+   <div class="box box4" id="box4"></div>
+   <div class="box box5" id="box5"></div>
+   <div class="box box6" id="box6"></div>
+  </div>
+</body>
+</html>
+<script>
+  function  sandiv(parent){
+      for(var i=0; i<100; i++){
+          var div=document.createElement('div');
+          div.className='inner';
+          parent.appendChild(div);
+      }
+  }
+     sandiv(box1)
+     sandiv(box2)
+     sandiv(box3)
+     sandiv(box4)
+     sandiv(box5)
+     sandiv(box6)
+
+  function couse(sin){
+       var i=0;
+       var j=0;
+       var sin=2*Math.PI/360;
+       
+  }
+</script>
